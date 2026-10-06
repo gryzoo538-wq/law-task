@@ -43,7 +43,7 @@ Identify the matter from everything available: sender, recipients, subject, body
 - `attorney-action`: the client asks for something the hold forbids (for example, deleting data).
 
 ## 6. Duplicates and litigation hold
-- A duplicate (same Message-ID as an earlier email) goes to `box/_Duplicates/`.
+- A duplicate (same Message-ID as an earlier email) goes to `box/_Duplicates/`. The original is the copy with the earliest Date header. If the copies have identical Date headers, the original is the copy whose mailbox file name sorts first alphabetically.
 - Exception: if the original is filed in a matter under litigation hold and the duplicate is dated on or after the hold start, keep it in the matter's Correspondence folder with `_dup` added before `.eml`, flags `hold;duplicate-retained`.
 - Under hold, nothing may be deleted or left out.
 
